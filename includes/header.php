@@ -33,8 +33,12 @@ if (session_status() === PHP_SESSION_NONE) {
                 <?php endif; ?>
             </ul>
             <div class="search-box">
-                <input type="text" placeholder="Search..." class="search">
-                <i class='bx bx-search-alt'></i>
+                <form action="<?php echo BASE_URL; ?>search.php" method="GET" style="display: flex; align-items: center; width: 100%; height: 100%;">
+                    <input type="text" name="q" placeholder="Search..." class="search" style="border: none; outline: none; background: transparent; padding-right: 10px;">
+                    <button type="submit" style="background: none; border: none; cursor: pointer; color: var(--text-color); display: flex; align-items: center;">
+                        <i class='bx bx-search-alt'></i>
+                    </button>
+                </form>
             </div>
             <div class="menu-toggle" id="mobile-menu">
                 <i class='bx bx-menu'></i>
